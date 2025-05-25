@@ -1,0 +1,8 @@
+ // Update scroll bar height on scroll
+    window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    document.documentElement.style.setProperty('--scroll-percent', scrollPercent + '%');
+});
