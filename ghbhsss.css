@@ -1,0 +1,239 @@
+/* Base Styles */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(
+        to bottom,
+        #0f0c29 0%,
+        #302b63 25%,
+        #24243e 50%,
+        #2c3e50 75%,
+        #134e5e 100%
+    );
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+}
+.backtoport{
+  display:flex;
+  position:fixed;
+  left:5px;
+  top:10px;
+  z-index:99999999;
+  background-color: #ffffff;
+  color:rgb(0, 0, 0);
+  font-size:18px;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+  padding:10px 17px;
+  border:none;
+  box-shadow:0 0 5px white;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.backtoport:hover{
+  transform:translateX(-3px);
+  box-shadow: 0 8px 25px rgba(255, 65, 108, 0.5);
+  -webkit-transform:translateX(-3px);
+  -moz-transform:translateX(-3px);
+  -ms-transform:translateX(-3px);
+  -o-transform:translateX(-3px);
+}
+.backtoport:active {
+    transform: scale(0.95); /* button slightly shrinks */
+    box-shadow: 0 3px 10px rgba(255, 65, 108, 0.6);
+    transition: transform 0.1s ease; /* faster transition for active */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #00ffe5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('ghbhss/gbhsscover.webp') center center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 65, 108, 0.5);
+}
+
+/* Map Section */
+.map-section {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.map-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.map-subtext {
+    font-size: 1em;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    border: 2px solid #00ffc3;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Journey Section */
+.journey-section {
+    padding: 80px 0;
+}
+
+.journey-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.journey-content img {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.journey-content img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .journey-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #134e5e, #71b280);
+      
+
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .btn {
+    background: white;
+    color: #2c3e50;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Specific fix for journey section images */
+.journey-content img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+}

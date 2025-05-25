@@ -1,0 +1,213 @@
+/* Glass Header - Always Visible */
+.glass-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.60); /* consistent glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+}
+
+/* Remove this – unnecessary and problematic */
+.glass-header::before {
+  display: none;
+}
+
+/* Container inside header */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000; /* Dark text for visibility */
+  text-decoration: none;
+}
+
+/* Navigation */
+ header {
+            background: linear-gradient(135deg, #a7c7f9, #b7e7f0);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            min-height: 60px;
+        }
+        header, .glass-header {
+  overflow: visible;
+}
+
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.1rem 0;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+            margin-top:0.51rem;
+            margin-bottom:0rem;
+        }
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding:5px;
+  padding-bottom:12px;
+  border-radius:20px;
+  background-color: black;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 500;
+ background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 2px solid rgba(255, 255, 255, 0.25);
+box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
+ margin-bottom:15px;
+}
+
+.nav-links a.active {
+  background: rgba(0, 255, 229, 0.3);
+  color: #00b8a9;
+  border: 1px solid #00b8a9;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(  145deg,  rgba(255, 255, 255, 0.2) 0%,  rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
+  color: #fff;
+  
+  /*Slightlyenlarge*/box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /*Addshadowfor"lifted"look*/text-decoration: none;
+  color: #000;
+  border:2px solid #39FF14;
+  color:#39FF14;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+
+
+
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 5rem;
+  color: #e46363;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    display: none;
+    padding: 20px 0;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+  }
+
+  .nav-links ul.show {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block !important;
+    background-color: rgb(0, 0, 0) !important;
+    z-index: 10000;
+  }
+  .logo {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; /* Dark text for visibility */
+  text-decoration: none;
+  margin-left:1rem;
+  display:inline-block;
+}
+.logo-mb-1-header{
+    position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Reem Kufi Ink", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display:flex;
+  display:inline-block;
+  margin-left:0;
+}
+.header-container {
+  min-height: 60px; /* or whatever minimum height you want */
+}
+
+}
+
+
+
+/* Body padding for fixed header */
+body {
+  margin: 0;
+  padding-top: 65px; /* offset for fixed header */
+}
+
+.logo-mb-1-header{
+    position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Reem Kufi Ink", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display:flex;
+  display:inline-block;
+  margin-left:4rem;
+}
