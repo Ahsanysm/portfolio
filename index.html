@@ -3,383 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahsan A. | Software Engineering Student</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter for body, Reem Kufi Ink for headings -->
+    <title>Ahsan</title>
+    <link rel="icon" type="image/png" href="titleLogo/AhsanysmTitleLogo(1)(1).jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon (using your existing one) -->
-    <link rel="icon" type="image/png" href="titleLogo/AhsanysmTitleLogo(1)(1).jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css_files/style.css">
+    <link rel="stylesheet" href="css_files/clock.css">
 
-    <script>
-        // Custom Tailwind theme configuration
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Reem Kufi Ink', 'serif'],
-                    },
-                    colors: {
-                        'dark-bg': '#111827', // A deep, modern navy
-                        'card-bg': '#1F2937', // A slightly lighter card background
-                        'primary': '#22c55e', // A vibrant green accent
-                        'primary-hover': '#16a34a',
-                        'light-text': '#E5E7EB',
-                        'muted-text': '#9CA3AF',
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
+    <link rel="stylesheet" href="header.css">
+
+    <!-- ADD THIS NEW THEME STYLESHEET -->
+    <link rel="stylesheet" href="css_files/theme.css">
 </head>
-<body class="bg-dark-bg text-light-text font-sans antialiased overflow-x-hidden">
-
-    <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-lg border-b border-gray-700 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-heading flex items-baseline gap-2">
-                Ahsan A.
-                <span class="text-lg text-primary font-sans hidden md:inline">احسن</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#projects" class="text-muted-text hover:text-primary transition-colors">Projects</a>
-                <a href="#education" class="text-muted-text hover:text-primary transition-colors">Education</a>
-                <a href="#story" class="text-muted-text hover:text-primary transition-colors">Blogs</a>
-                <a href="#contact" class="text-muted-text hover:text-primary transition-colors">Contact</a>
-            </nav>
-            <a href="#contact" class="hidden md:inline-block bg-primary text-white font-semibold px-5 py-2 rounded-full hover:bg-primary-hover transition-transform duration-300 hover:scale-105">
-                Get In Touch
-            </a>
-            <button id="mobileMenuBtn" class="md:hidden text-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden hidden bg-card-bg border-t border-gray-700">
-            <a href="#projects" class="block py-3 px-6 text-muted-text hover:bg-dark-bg hover:text-primary">Projects</a>
-            <a href="#education" class="block py-3 px-6 text-muted-text hover:bg-dark-bg hover:text-primary">Education</a>
-            <a href="#story" class="block py-3 px-6 text-muted-text hover:bg-dark-bg hover:text-primary">Blogs</a>
-            <a href="#contact" class="block py-3 px-6 text-muted-text hover:bg-dark-bg hover:text-primary">Contact</a>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6 pt-32">
-        <!-- Hero Section -->
-        <section id="hero" class="flex flex-col md:flex-row items-center gap-12 min-h-[70vh]">
-            <div class="md:w-3/5 text-center md:text-left animate-fade-in-up">
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-                    Hi, I'm <span class="text-primary">Ahsan</span>
-                </h1>
-                <h2 class="text-2xl text-muted-text mt-4">A Software Engineering Student Building Digital Experiences</h2>
-                <p class="mt-6 text-lg max-w-2xl mx-auto md:mx-0">I'm passionate about building innovative solutions and sharing knowledge through code. Currently exploring the depths of computer science while documenting my journey.</p>
-                <div class="mt-10 flex justify-center md:justify-start gap-4">
-                    <a href="https://github.com/Ahsanysm" target="_blank" rel="noopener noreferrer" class="bg-primary text-white font-semibold py-3 px-6 rounded-full flex items-center gap-2 hover:bg-primary-hover transition-transform duration-300 hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35.0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
-                        View My Work
-                    </a>
-                    <a href="https://in.linkedin.com/in/ahsanysm?trk=profile-badge" target="_blank" rel="noopener noreferrer" class="bg-card-bg text-light-text font-semibold py-3 px-6 rounded-full flex items-center gap-2 hover:bg-gray-600 transition-transform duration-300 hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                        Get In Touch
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-2/5 flex justify-center animate-fade-in-up" style="animation-delay: 0.2s;">
-                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg shadow-primary/20">
-                    <img src="profilePic/ahsan2.jpg" alt="Ahsan's Portrait" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold">My Recent <span class="text-primary">Projects</span></h2>
-                <p class="text-muted-text mt-4 max-w-2xl mx-auto">Here are a few projects I've worked on. Each one represents a learning milestone.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
-                    <img src="projThumbails/LogoTyt.png" alt="Typing Test Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">TyT - Typing Test</h3>
-                        <p class="text-muted-text mb-4">A sleek typing test website to measure your speed and accuracy.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
-                            <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-                        </div>
-                        <div class="flex gap-4 mt-auto">
-                            <a href="https://ahsanysm.github.io/Tyt/" target="_blank" class="text-primary font-semibold hover:underline">Live Demo</a>
-                            <a href="https://github.com/Ahsanysm/Tyt" target="_blank" class="text-primary font-semibold hover:underline">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <img src="projThumbails/ytC.png" alt="YouTube Clone Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">YouTube Clone</h3>
-                        <p class="text-muted-text mb-4">A static, responsive clone of the YouTube homepage.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                           <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
-                           <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-                           <span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-                        </div>
-                        <div class="flex gap-4 mt-auto">
-                           <a href="https://ahsanysm.github.io/Youtube-clone/" target="_blank" class="text-primary font-semibold hover:underline">Live Demo</a>
-                           <a href="https://github.com/Ahsanysm/Youtube-clone" target="_blank" class="text-primary font-semibold hover:underline">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 animate-fade-in-up" style="animation-delay: 0.3s;">
-                    <img src="projThumbails/snakeGame.webp" alt="Snake Game Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Classic Snake Game</h3>
-                        <p class="text-muted-text mb-4">A classic snake game implemented in Java using the Swing GUI toolkit.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                           <span class="bg-blue-500/20 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full">Java</span>
-                           <span class="bg-blue-500/20 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full">Swing</span>
-                        </div>
-                        <div class="flex gap-4 mt-auto">
-                            <span class="text-muted-text">Desktop App</span>
-                            <a href="#" target="_blank" class="text-primary font-semibold hover:underline">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-24">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold">My <span class="text-primary">Education</span></h2>
-                <p class="text-muted-text mt-4 max-w-2xl mx-auto">My academic journey so far.</p>
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <!-- Education Item 1 -->
-                <div class="relative pl-8 sm:pl-32 py-6 group animate-fade-in-up">
-                    <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-primary after:border-4 after:box-content after:border-gray-700 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-primary bg-primary/20 rounded-full">Present</time>
-                        <div class="text-xl font-bold text-light-text">B.Tech, Computer Science</div>
-                    </div>
-                    <div class="text-muted-text">Maharaja Surajmal Institute of Technology</div>
-                    <div class="text-sm text-muted-text">2023 - 2027</div>
-                </div>
-                 <!-- Education Item 2 -->
-                <div class="relative pl-8 sm:pl-32 py-6 group animate-fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-700 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-primary after:border-4 after:box-content after:border-gray-700 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-primary bg-primary/20 rounded-full">2023</time>
-                        <div class="text-xl font-bold text-light-text">Class 12th</div>
-                    </div>
-                    <div class="text-muted-text">GBHSS SOPORE</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blogs Section (Card Stack) -->
-        <section id="story" class="py-24">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold">My Coding <span class="text-primary">Journey</span></h2>
-                <p class="text-muted-text mt-4 max-w-2xl mx-auto">A log of my daily progress, learnings, and breakthroughs.</p>
-            </div>
-            <div class="relative w-full max-w-sm mx-auto h-[450px] animate-fade-in-up" style="animation-delay: 0.2s;">
-                <div id="cardStack" class="relative w-full h-full">
-                    <!-- Cards will be injected here by JavaScript -->
-                </div>
-            </div>
-            <div class="flex justify-center gap-4 mt-8">
-                <button id="prevBtn" class="bg-card-bg text-light-text font-bold w-14 h-14 rounded-full text-2xl hover:bg-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">&larr;</button>
-                <button id="nextBtn" class="bg-card-bg text-light-text font-bold w-14 h-14 rounded-full text-2xl hover:bg-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">&rarr;</button>
-            </div>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold">Get In <span class="text-primary">Touch</span></h2>
-                <p class="text-muted-text mt-4 max-w-2xl mx-auto">Feel free to reach out for collaborations or just to say hello!</p>
-            </div>
-            <form id="contactForm" class="max-w-xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
-                <div class="mb-6">
-                    <label for="name" class="block mb-2 text-sm font-medium text-muted-text">Name</label>
-                    <input type="text" id="name" name="name" class="bg-card-bg border border-gray-600 text-light-text text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3" required>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium text-muted-text">Email</label>
-                    <input type="email" id="email" name="email" class="bg-card-bg border border-gray-600 text-light-text text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3" required>
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="block mb-2 text-sm font-medium text-muted-text">Message</label>
-                    <textarea id="message" name="message" rows="5" class="bg-card-bg border border-gray-600 text-light-text text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary-hover transition-transform duration-300 hover:scale-105">Send Message</button>
-                </div>
-            </form>
-        </section>
-
-    </main>
+<body>
     
-    <!-- Footer -->
-    <footer class="bg-card-bg border-t border-gray-700 mt-24">
-        <div class="container mx-auto px-6 py-8 text-center text-muted-text">
-             <div class="flex justify-center gap-6 mb-6">
-                <a href="https://github.com/ahsanysm" target="_blank" class="hover:text-primary transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35.0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></a>
-                <a href="https://in.linkedin.com/in/ahsanysm?trk=profile-badge" target="_blank" class="hover:text-primary transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-                <a href="mailto:erahsan313@gmail.com" class="hover:text-primary transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+<header class="glass-header">
+  <div class="container header-container">
+    <a href="#" class="logo" onclick="showHearts(event)">Ahsan A.<div class="logo-mb-1-header">احسن</div></a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#notes">Education</a></li>
+        <li><a href="#articles">Resume</a></li>
+        <li><a href="#story">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm Ahsan</h1>
+                    <h2 class="hero-subtitle">Software Engineering Student</h2>
+                    <p>I'm passionate about building innovative solutions and sharing knowledge through code. Currently exploring the depths of computer science while documenting my journey.</p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/Ahsanysm" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center;">
+                            <i class="fab fa-github" style="font-size: 1.5rem; margin-right: 10px;"></i> View My Work
+                        </a>
+                       <a href="https://in.linkedin.com/in/ahsanysm?trk=profile-badge" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                           <i class="fab fa-linkedin" style="margin-right: 8px; font-size: 1.5rem;"></i> Get In Touch
+                       </a>
+
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="profilePic/ahsan2.jpg" alt="Ahsan's Portrait">
+                </div>
+                
             </div>
-            <p>&copy; <span id="currentYear"></span> Ahsan A. All rights reserved.</p>
         </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center">My Projects</h2>
+            <p class="text-center mb-3">Here are some of my recent projects. Each one represents a learning milestone.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="projThumbails/LogoTyt.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>TyT</h3>
+                        <p>Typing test website- Take your typing test at my website and share feedback</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ahsanysm.github.io/Tyt/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Ahsanysm/Tyt" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="projThumbails/snakeGame.webp" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>SnakeGame</h3>
+                        <p>This is a classic Snake Game implemented in Java using Swing for the GUI.Test your reflexes and strategy. Here</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="projThumbails/ytC.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Youtube-clone</h3>
+                        <p>This is a static clone of youtube </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Html</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ahsanysm.github.io/Youtube-clone/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Ahsanysm/Youtube-clone" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="projThumbails/underDev.png" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>CFS</h3>
+                        <p>Under development ⚠️.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Js.</span>
+                            <span class="project-tag">Noe.js</span>
+                            <span class="project-tag">MongoDb</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="custom-section">
+    <div class="marquee-tilt">
+            <marquee class="custom-marquee">
+        <span class="secure-text">
+            HTML <img class="marque-icon-image" src="icons/htmlnew.png" alt="">
+        </span>
+        <span class="secure-text">
+            CSS <img class="marque-icon-image" src="icons/cssnew.png" alt="">
+        </span>
+        <span class="secure-text">
+            Javascript <img class="marque-icon-image" src="icons/jsnew.png" alt="">
+        </span>
+        <span class="secure-text">
+            C <img class="marque-icon-image" src="icons/c.png" alt="">
+        </span>
+        <span class="secure-text">
+            C++ <img class="marque-icon-image" src="icons/c++new.png" alt="">
+        </span>
+        <span class="secure-text">
+            TAILWIND CSS <img class="marque-icon-image" src="icons/tailwindcssnew.png" alt="">
+        </span>
+        <span class="secure-text">
+            REACT <img class="marque-icon-image" src="icons/react.png" alt="">
+        </span>
+        <span class="secure-text">
+            JAVA <img class="marque-icon-image" src="icons/javaneww.png" alt="">
+        </span>
+        <span class="secure-text">
+            MySQL <img class="marque-icon-image" src="icons/mysqlnew.png" alt="">
+        </span>
+
+    </marquee>
+    </div>
+</section>
+
+    <!-- Education -->
+    <section id="notes">
+        <div class="container">
+            <h2 class="text-center">Education</h2>
+            <p class="text-center mb-3">Here are my educational qualifications</p>
+            
+            <div class="notes-container">
+                <!-- education 1 -->
+                <div class="note-card">
+                    <div class="note-date">B.Tech CSE<p>2027</p></div>
+                    <h3>Maharaja Surajmal Institute of Technology</h3>
+                    <p>I am a 2nd year undergrad student of CSE at MSIT, exploring and learning different software technologies here.</p>
+                    <a href="msit.html" class="read-more">Explore ➤</a>
+                    </a>
+                </div>
+                
+                <!-- education 2 -->
+                <div class="note-card">
+                    <div class="note-date">CLASS 12TH</div>
+                    <h3>GBHSS SOPORE</h3>
+                    <p>I completed my INTER schooling here, with Medical and Mathematics as my main subjects in intermediate.</p>
+                    <a href="gbhsss.html" class="read-more">Explore ➤</a>
+                </div>
+                
+                <!-- Note 3 -->
+                <div class="note-card">
+                    <div class="note-date">PRIMARY</div>
+                    <h3>Sideeqiya Public School</h3>
+                    <p>I have completed here the max part of my education of almost a decade here</p>
+                    <a href="sps.html" class="read-more">Explore ➤</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+     <div class="article-grid">
+         <section id="articles">
+         <div class="container">
+             <h2 class="text-center">Resume</h2>
+             <p class="text-center mb-3">Engineer in the Making | Learning, Building, Evolving.</p>
+             
+             <div class="articles-container">
+                 <!-- Article 1 -->
+                 <div class="article-card">
+                     <div class="article-content">
+                         <div class="article-meta">
+                             <span>May 24, 2025</span>
+                             <!---->
+                             <span>2 min read</span>
+                         </div>
+                         <h3>Engineer in the making, fueled by passion and persistence.</h3>
+                         <p>I'm a dedicated Computer Science undergraduate at MSIT, passionate about building impactful tech — from AI-powered apps to full-stack web projects. I’ve developed apps like a smart typing test (TYT) and a YouTube clone, and I’m currently working on a Smart Event Planner with AI integration. With a strong foundation in C++, Java, and Python, I’m also exploring DSA, web development, and cybersecurity to become a well-rounded developer. I believe in learning by building, and I'm always up for solving real-world problems through code.
+
+</p>
+                         <a href="#" class="read-more">under development!</a>
+                     </div>
+                 </div>
+                 
+                 <!-- Article 2 -->
+                   <!-- <div class="article-card">
+                     <div class="article-content">
+                         <div class="article-meta">
+                             <span>April 28, 2024</span>
+                             <span>12 min read</span>
+                         </div>
+                         <h3>Building Accessible Web Applications</h3>
+                         <p>A comprehensive guide to implementing accessibility best practices in modern web development. Covering semantic HTML, ARIA attributes, keyboard navigation, and testing tools to ensure your applications are usable by everyone.</p>
+                         <a href="#" class="read-more">Continue reading →</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+                   -->
+     </section>
+     </div>
+    
+
+    <!-- blogs Section -->
+    <section id="story">
+        <div class="container">
+            <h2 class="text-center">Blogs</h2>
+            <p class="text-center mb-3">Journal of my coding journey and daily learnings.</p>
+            
+            <div class="timeline">
+                <!-- Entry 0.9 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 15, 2025</div>
+                        <h3>Perplexity: Era of Ai vs classic Programming</h3>
+                        <p>Massive upscale of Ai in past few time,seemigly fears classical appraoch to programming for programmers. If this upscalling continued at this pace it clearly indicates division among programmers would be created,one Who know how to use these tools ofcourse they are proificient then layman, But the 2nd ones would be the programmers understanding stuff at bits level and they won't be replaced by any of these tools. lets say if world has say 300M developers maybe merely 10M would be those irreplacble ones, rest would the ones using Ai tools but always in perplexity of elite engineering role in IT </p>
+                    </div>
+                </div>
+
+                <!-- Entry 1-->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 23, 2025</div>
+                        <h3>Debuging my portfolio</h3>
+                        <p>One move lead me to a struck situation for past 2 days. While organising the code of portfolio into folders lost the js functionality all over my webpage. I have been fixing🛠️ it from past 2 days merely found anything wrong at first, But at the end learned a new thing in js called "defer". Finally i have fixed it every js element is working smooth.code debuging sucks sometimes😅</p>
+                    </div>
+                </div>
+                
+                <!-- Entry 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 14, 2024</div>
+                        <h3>Algorithm Deep Dive</h3>
+                        <p>Spent the day implementing Dijkstra's algorithm from scratch. The visualization helped solidy my understanding of how it explores paths.</p>
+                    </div>
+                </div>
+                
+                <!-- Entry 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 13, 2024</div>
+                        <h3>Debugging Marathon</h3>
+                        <p>Encountered a tricky race condition in my student portal project. After 4 hours of debugging, finally found the issue - missing await on an async function call!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+<!-- Section to embed the Journey page -->
+<section id="journey-embed" style="padding: 50px 0;">
+    <div class="container">
+        <h2 class="text-center">My Journey</h2>
+        <p class="text-center mb-3">A live look at my coding journey and daily learnings.</p>
+        <!-- This is the frame that will contain your journey.html page -->
+        <div style="width: 100%; max-width: 900px; height: 700px; margin: 30px auto 0; border: 1px solid #444; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <iframe src="journey.html" style="width: 100%; height: 100%; border: none;" title="My Coding Journey Blog"></iframe>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center">Get In Touch</h2>
+            <p class="text-center mb-3">Feel free to reach out for collaborations or just to say hello!</p>
+            
+            <div class="contact-form" style="max-width: 500px; margin: 0 auto;">
+                <form id="contactForm">
+                    <div style="margin-bottom: 1rem; ">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; ;">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+                        <textarea id="message" name="message" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 50%; display: block; margin: 0 auto;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="scroll-indicator"></div>
+
+
+   <script src="js_files/clock.js" defer></script>
+<script src="js_files/copyright.js" defer></script>
+<script src="js_files/formSubmit.js" defer></script>
+<script src="js_files/mobil-menu-button.js" ></script>
+<script src="js_files/realTimeclock.js" defer></script>
+<script src="js_files/scrollAnimation.js" defer></script>
+<script src="js_files/scrollBar.js" defer></script>
+<script src="js_files/subsidary.js" defer></script>
+<script src="js_files/visitorCounter.js" defer></script>
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.querySelector('nav.nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// Optional: Close menu when clicking a link
+document.querySelectorAll('nav.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+});
+
+</script>
+
+
+
+</body>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo-mb-1-footer">احسن</div>
+            <p>Building digital experiences one line of code at a time.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/ahsanysm" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/ahsanysm?trk=profile-badge" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:erahsan313@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+            
+            <div class="stamp">
+                <img class="stamp-image" src="copyrightFooter/stamp2.png" alt="N/A">
+            </div>
+            
+            
+
+            <div class="footer-info">
+                <span id="currentYear">© 2025 Ahsan</span>
+                <span id="visitorCount">Visitors: 0</span>
+            </div>
+        </div>
+
+ <!-- Add this inside your footer, before the closing </footer> tag -->
+<div class="footer-clock">
+  <div class="clock">
+    <div class="hours">
+      <div class="first">
+        <div class="number">0</div>
+      </div>
+      <div class="second">
+        <div class="number">0</div>
+      </div>
+    </div>
+    <div class="tick">:</div>
+    <div class="minutes">
+      <div class="first">
+        <div class="number">0</div>
+      </div>
+      <div class="second">
+        <div class="number">0</div>
+      </div>
+    </div>
+    <div class="tick">:</div>
+    <div class="seconds">
+      <div class="first">
+        <div class="number">0</div>
+      </div>
+      <div class="second infinite">
+        <div class="number">0</div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Mobile Menu Toggle ---
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            document.querySelectorAll('#mobileMenu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // --- Header Shadow on Scroll ---
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('shadow-lg');
-                } else {
-                    header.classList.remove('shadow-lg');
-                }
-            });
-
-            // --- Animate on Scroll ---
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-5');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.animate-fade-in-up').forEach(el => {
-                el.classList.add('opacity-0', 'translate-y-5', 'transition-all', 'duration-700', 'ease-out');
-                observer.observe(el);
-            });
-
-            // --- Blog Card Stack Logic ---
-            const blogPosts = [
-                {
-                    date: "May 13, 2024",
-                    title: "Debugging Marathon",
-                    content: "Encountered a tricky race condition in my student portal project. After 4 hours of debugging, finally found the issue - missing await on an async function call!"
-                },
-                {
-                    date: "May 14, 2024",
-                    title: "Algorithm Deep Dive",
-                    content: "Spent the day implementing Dijkstra's algorithm from scratch. The visualization helped solidify my understanding of how it explores paths."
-                },
-                {
-                    date: "May 23, 2025",
-                    title: "Debuging my portfolio",
-                    content: "One move lead me to a struck situation for past 2 days. While organising the code of portfolio into folders lost the js functionality all over my webpage. Finally i have fixed it every js element is working smooth."
-                },
-                {
-                    date: "Aug 15, 2025",
-                    title: "Perplexity: Era of AI",
-                    content: "Massive upscale of Ai in past few time,seemigly fears classical appraoch to programming for programmers. It clearly indicates a division among programmers would be created."
-                }
-            ];
-
-            const cardStack = document.getElementById('cardStack');
-            const nextBtn = document.getElementById('nextBtn');
-            const prevBtn = document.getElementById('prevBtn');
-            let currentIndex = blogPosts.length - 1;
-
-            function renderCards() {
-                cardStack.innerHTML = '';
-                blogPosts.forEach((post, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'absolute w-full h-full p-6 bg-card-bg rounded-xl shadow-lg border border-gray-700 flex flex-col transition-all duration-500 ease-out';
-                    card.style.transformOrigin = 'bottom center';
-                    card.innerHTML = `
-                        <h3 class="text-xl font-bold text-primary mb-2">${post.title}</h3>
-                        <span class="text-xs text-muted-text mb-4">${post.date}</span>
-                        <p class="text-light-text flex-grow overflow-y-auto">${post.content}</p>
-                    `;
-                    cardStack.appendChild(card);
-                });
-                updateCardStack();
-            }
-
-            function updateCardStack() {
-                const cards = cardStack.children;
-                for (let i = 0; i < cards.length; i++) {
-                    const card = cards[i];
-                    const diff = currentIndex - i;
-                    
-                    if (diff < 0) { // Cards that have been swiped
-                        card.style.transform = `translateX(-150%) rotate(-20deg)`;
-                        card.style.opacity = '0';
-                    } else if (diff === 0) { // Top card
-                        card.style.transform = `translateY(0) rotate(0) scale(1)`;
-                        card.style.opacity = '1';
-                        card.style.zIndex = '10';
-                    } else if (diff <= 2) { // Next 2 cards
-                        card.style.transform = `translateY(${diff * -15}px) scale(${1 - diff * 0.05})`;
-                        card.style.opacity = '1';
-                         card.style.zIndex = 10 - diff;
-                    } else { // Hidden cards
-                        card.style.transform = `translateY(${diff * -15}px) scale(${1 - diff * 0.05})`;
-                        card.style.opacity = '0';
-                    }
-                }
-                
-                nextBtn.disabled = currentIndex <= 0;
-                prevBtn.disabled = currentIndex >= blogPosts.length - 1;
-            }
-
-            nextBtn.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCardStack();
-                }
-            });
-
-            prevBtn.addEventListener('click', () => {
-                if (currentIndex < blogPosts.length - 1) {
-                    currentIndex++;
-                    updateCardStack();
-                }
-            });
-
-            renderCards();
-
-            // --- Footer Year ---
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        });
-    </script>
-</body>
 </html>
 
