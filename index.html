@@ -324,6 +324,21 @@
                     </div>
                 </div>
 
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">feb 01, 2026</div>
+                        <h3>AUTH LOGIN using SMTP on a server</h3>
+                        <p>I was messing around with an SMTP server in the lab today, interacting with it manually just to get a better feel for the raw commands. It’s always interesting to drop the GUI tools and see what’s actually happening under the hood with Telnet or Netcat.
+Everything was going standard—sent the EHLO, set the MAIL FROM—until I hit the authentication stage.
+The server used AUTH LOGIN, which is a bit of a pain if you’re typing manually because it demands everything in Base64. You can’t just type "admin"; you have to open a new tab, echo the string into a base64 converter, and paste the output back. I actually tripped up on this at first and kept getting "Invalid base data" errors because I was trying to send plain text.
+But once I figured out the encoding, I noticed something much more concerning than just an inconvenient login process.
+When I entered the wrong password, the server just gave me a standard error message and waited for the next input. I tried again. Same result. I tried five more times. Nothing changed.
+The server wasn't slowing down my connection, and it wasn't locking the account.
+It made me realize how dangerous this default configuration is. In a controlled lab, it’s just a way to learn. But in the real world, this is basically rolling out the red carpet for a dictionary attack. Without a lockout policy—like banning an IP after three failed attempts—there is absolutely nothing stopping an attacker from running a script (like Hydra) to hammer the server with thousands of passwords a minute.
+We spend a lot of time studying complex exploits, but sometimes the biggest vulnerability is just a lack of basic rate limiting. If you let someone guess a password forever, eventually they’re going to get it right. It was a good reminder that tools like Fail2Ban aren't just "nice to haves," they are essentially mandatory if you want to keep a service online.</p>
+                    </div>
+                </div>
+                
                 <!-- Entry 1-->
                 <div class="timeline-item left">
                     <div class="timeline-content">
@@ -494,6 +509,7 @@ document.querySelectorAll('nav.nav-links a').forEach(link => {
     </footer>
 
 </html>
+
 
 
 
